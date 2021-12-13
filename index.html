@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+    <title>Album Cover</title>
+    <link rel="shortcut icon" type="jpg" href="ded8ncv-68846cf9-7a73-4c9e-b576-dcb432a2f5cd.jpg">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <audio autoplay>
+      <source src="mystery.ogg" type="audio/ogg">
+      <source src="mystery.mp3" type="audio/mpeg">
+    </audio>
+    <div class="alertBad">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      WARNING: You found an album of a mysterious webdeveloper...
+    </div>
+    <div class="alertGood">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      Click on the image to know more about her.
+    </div>
+    <svg width="100%" height="100%"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <filter id="light">
+    <feGaussianBlur stdDeviation="3" result="blurred"></feGaussianBlur>
+    <feColorMatrix in="blurred" type="luminanceToAlpha" result="bumpMap"></feColorMatrix>
+    <feDiffuseLighting in="bumpMap" surfaceScale="3" result="light">
+      <fePointLight x="225" y="150" z="30"></fePointLight>
+    </feDiffuseLighting>
+    <feComposite in="light" in2="SourceGraphic"
+      operator="arithmetic"
+      k1="1" k2="0" k3="0" k4="0">
+    </feComposite>
+  </filter>
+  <pattern id="pattern1"
+    width="450" height="300"
+    patternUnits="userSpaceOnUse"
+  >
+    <image  xlink:href="istockphoto-173870123-612x612.jpg" width="612" height="444"></image>
+  </pattern>
+  <rect width="100%" height="100%"
+    fill="url(#pattern1)" filter="url(#light)"
+  ></rect>
+</svg>
+
+<div class="title">
+  Dilnaz's Album
+</div>
+
+<div class="cover">
+  <a href="album.html"> <img src="1639343629242_filtered.JPG" data-src-600px="1639343629242_filtered-600px.jpg"
+     data-src-800px="1639343629242_filtered-800px.jpg" alt="me" width="580px" height="443px"></a>
+</div>
+
+  </body>
+</html>

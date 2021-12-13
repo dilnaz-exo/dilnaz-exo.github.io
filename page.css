@@ -1,0 +1,110 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.flower1 {
+  position: absolute;
+  top: 400px;
+  left: 1200px;
+  transform: rotate(10deg);
+}
+
+.flower2 {
+  position: absolute;
+  top: 450px;
+  left: 1200px;
+  transform: rotate(30deg);
+}
+
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+  font-family: myFirstFont;
+  font-size: 64px;
+  color: #88593A;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content {
+  background-color: #88593A;
+  padding: 10px;
+  transition: transform .2s;
+  color: #FBC992;
+}
+
+.content:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+body {
+  background-color: #FBC992;
+  background-image: url('old-paper-texture-background_118047-1365.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@font-face {
+   font-family: myFirstFont;
+   src: url(ChopinScript.otf);
+}
+
+.button {
+  position: absolute;
+  top: 700px;
+  left: 100px;
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #FBC992;
+  background-color: #88593A;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #548982}
+
+.button:active {
+  background-color: #FBC992;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
